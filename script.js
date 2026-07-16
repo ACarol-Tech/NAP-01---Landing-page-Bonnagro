@@ -134,10 +134,40 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Aqui entraria a integração real (fetch para API/e-mail).
-    // Como ainda não há backend, simulamos o envio com sucesso.
-    const nome = document.getElementById('nome').value.trim().split(' ')[0];
-    status.textContent = `Obrigado, ${nome}! Recebemos sua solicitação e vamos responder em breve.`;
+    const EMAIL_EMPRESA = 'anaaasd55@gmail.com';
+    const NUMERO_WHATSAPP_ORCAMENTO = '5591985866132';
+
+    const rotulosLinha = {
+      'bovinos': 'Bovinos',
+      'caprinos-ovinos': 'Caprinos / Ovinos',
+      'suinos': 'Suínos',
+      'mais-de-uma': 'Mais de uma linha'
+    };
+
+    const nomeCompleto = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const linha = rotulosLinha[document.getElementById('linha').value] || document.getElementById('linha').value;
+    const observacoes = document.getElementById('mensagem').value.trim();
+
+    const resumo =
+`Nome: ${nomeCompleto}
+E-mail: ${email}
+Telefone: ${telefone}
+Linha de interesse: ${linha}
+Observações: ${observacoes}`;
+
+    // Abre o app de e-mail do visitante, já endereçado e preenchido para a empresa
+    const assuntoEmail = encodeURIComponent('Solicitação de orçamento - Site Bonnagro');
+    const corpoEmail = encodeURIComponent(resumo);
+    window.location.href = `mailto:${EMAIL_EMPRESA}?subject=${assuntoEmail}&body=${corpoEmail}`;
+
+    // Abre o WhatsApp da empresa em nova aba, já com a mesma mensagem
+    const mensagemWhats = encodeURIComponent(`Solicitação de orçamento pelo site:\n\n${resumo}`);
+    window.open(`https://wa.me/${NUMERO_WHATSAPP_ORCAMENTO}?text=${mensagemWhats}`, '_blank', 'noopener');
+
+    const primeiroNome = nomeCompleto.split(' ')[0];
+    status.textContent = `Obrigado, ${primeiroNome}! Abrimos seu e-mail e o WhatsApp com sua solicitação — é só confirmar o envio nos dois.`;
     status.className = 'formulario__status sucesso';
     form.reset();
   });

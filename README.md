@@ -8,7 +8,10 @@ Landing page institucional da **Bonnagro**, empresa de ração animal para bovin
 - **Estilização CSS** — `style.css`, com sistema de cores e tipografia próprio (verde-mata, dourado-milho, tons de terra), usando as fontes Fraunces, Work Sans e IBM Plex Mono.
 - **Responsividade** — layout fluido com `clamp()`, grid que se adapta em `900px` e `720px`, e menu mobile do tipo hambúrguer.
 - **Tabela** — tabela nutricional comparativa entre as linhas Bovinos, Caprinos/Ovinos e Suínos (proteína, energia, fibra, cálcio, fósforo, consumo diário).
-- **Formulário** — formulário de solicitação de orçamento (nome, e-mail, telefone, linha de interesse, mensagem).
+- **Formulário** — formulário de solicitação de orçamento (nome, e-mail, telefone, linha de interesse, mensagem). Ao enviar, abre automaticamente:
+  - o **app de e-mail** do visitante, endereçado para `anaaasd55@gmail.com`, com todos os dados já formatados no corpo da mensagem;
+  - o **WhatsApp da empresa** (`+55 91 98586-6132`), em nova aba, com a mesma mensagem.
+  - A pessoa só precisa confirmar o envio nos dois. Para trocar o e-mail ou o número, edite as constantes `EMAIL_EMPRESA` e `NUMERO_WHATSAPP_ORCAMENTO` no início do bloco de submit do formulário, em `script.js`.
 - **JavaScript** — `script.js`, com:
   - Validação de formulário em tempo real (nome, e-mail com regex, telefone, seleção obrigatória, mensagem mínima), com mensagens de erro por campo;
   - Navegação por hiperlink (menu com âncoras `#inicio`, `#linhas`, `#tabela`, `#contato`), incluindo destaque automático do link ativo conforme o scroll;
