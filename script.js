@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const anoEl = document.getElementById('anoAtual');
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
+  /* ---------- Sombra no header ao rolar a página ---------- */
+  const topo = document.getElementById('topo');
+  if (topo) {
+    const atualizarSombraTopo = () => {
+      topo.classList.toggle('topo--rolado', window.scrollY > 12);
+    };
+    window.addEventListener('scroll', atualizarSombraTopo);
+    atualizarSombraTopo();
+  }
+
   /* ---------- Menu mobile ---------- */
   const menuToggle = document.getElementById('menuToggle');
   const nav = document.getElementById('navPrincipal');
