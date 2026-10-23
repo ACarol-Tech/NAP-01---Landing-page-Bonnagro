@@ -44,17 +44,6 @@ bonnagro/
    ```
 3. Acesse o endereço indicado pelo terminal (ex.: `http://localhost:3000`).
 
-## Como publicar (GitHub Pages)
-
-1. Crie um repositório no GitHub (ex.: `bonnagro-landing-page`).
-2. Envie os arquivos deste projeto para o repositório:
-   ```bash
-   git init
-   git add .
-   git commit -m "NAP 01 - Landing page Bonnagro"
-   git branch -M main
-   git remote add origin https://github.com/SEU_USUARIO/bonnagro-landing-page.git
-   git push -u origin main
    ```
 ## Melhorias de UI/UX (atualização)
 
