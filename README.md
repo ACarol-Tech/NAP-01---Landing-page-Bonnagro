@@ -56,21 +56,6 @@ bonnagro/
    git remote add origin https://github.com/SEU_USUARIO/bonnagro-landing-page.git
    git push -u origin main
    ```
-3. No GitHub, vá em **Settings → Pages**, selecione a branch `main` e a pasta `/root`, salve.
-4. A página ficará disponível em:
-   `https://SEU_USUARIO.github.io/bonnagro-landing-page/`
-
-## Créditos das imagens
-
-As fotos usadas no site vêm do **Wikimedia Commons** (banco de imagens livre) e foram escolhidas por serem de uso permitido:
-
-- Colheita de soja ao pôr do sol — fazenda São José (fundo do hero e banner de campo)
-- "Fazendas de Gado" — fazenda às margens do Rio Amazonas (card Bovinos) — **licença CC BY-SA 4.0**, requer atribuição ao reutilizar
-- Plantação de soja (banner de campo)
-- Cabra (card Caprinos/Ovinos) e porco (card Suínos) — imagens de domínio público (USDA)
-
-Recomendo, assim que possível, substituir essas fotos por imagens reais da Bonnagro (fazenda, rebanho, equipe) — é só trocar o link do `src` de cada `<img>` por `assets/nome-da-foto.jpg` no `index.html`.
-
 ## Melhorias de UI/UX (atualização)
 
 - **Cantos mais arredondados** (`--raio` de 6px para 10px) em cards, botões, formulário e tabela — visual mais suave e moderno.
