@@ -44,17 +44,3 @@ bonnagro/
    ```
 3. Acesse o endereço indicado pelo terminal (ex.: `http://localhost:3000`).
 
-   ```
-## Melhorias de UI/UX (atualização)
-
-- **Cantos mais arredondados** (`--raio` de 6px para 10px) em cards, botões, formulário e tabela — visual mais suave e moderno.
-- **Efeito de hover** (elevação + sombra) adicionado também aos cards de "Linhas de Ração" (os cards de "Serviços" já tinham).
-- **Header fixo** ganhou uma sombra sutil que aparece só quando a página é rolada, para dar mais profundidade sem perder a sobriedade do menu.
-- **Faixa de métricas / prova social** logo abaixo do hero (produtores atendidos, anos de mercado, linhas de ração, suporte técnico).
-
-  ⚠️ **IMPORTANTE:** os números dessa faixa (`+500`, `10`, etc.) são **placeholders de exemplo**, só para preencher o layout. **Troque pelos números reais da Bonnagro antes de publicar o site** — no `index.html`, procure pela seção com o comentário `<!-- ATENÇÃO: os números abaixo são EXEMPLO/placeholder -->` e edite o texto dentro de cada `<span class="metricas__numero">`.
-
-## Observações
-
-- O envio do formulário está simulado no front-end (não há back-end configurado). Para envio real por e-mail, integre com um serviço como Formspree, EmailJS ou uma API própria.
-- A logo utilizada é a imagem fornecida pelo cliente (`assets/logo.jpeg`).
